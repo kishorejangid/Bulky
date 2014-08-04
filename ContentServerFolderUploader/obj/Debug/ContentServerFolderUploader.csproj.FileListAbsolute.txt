@@ -1,0 +1,17 @@
+c:\users\kishore\documents\visual studio 2013\Projects\ContentServerFolderUploader\ContentServerFolderUploader\bin\Debug\ContentServerFolderUploader.exe.config
+c:\users\kishore\documents\visual studio 2013\Projects\ContentServerFolderUploader\ContentServerFolderUploader\bin\Debug\ContentServerFolderUploader.exe
+c:\users\kishore\documents\visual studio 2013\Projects\ContentServerFolderUploader\ContentServerFolderUploader\bin\Debug\ContentServerFolderUploader.pdb
+c:\users\kishore\documents\visual studio 2013\Projects\ContentServerFolderUploader\ContentServerFolderUploader\obj\Debug\ContentServerFolderUploader.csprojResolveAssemblyReference.cache
+c:\users\kishore\documents\visual studio 2013\Projects\ContentServerFolderUploader\ContentServerFolderUploader\obj\Debug\MainWindow.baml
+c:\users\kishore\documents\visual studio 2013\Projects\ContentServerFolderUploader\ContentServerFolderUploader\obj\Debug\MainWindow.g.cs
+c:\users\kishore\documents\visual studio 2013\Projects\ContentServerFolderUploader\ContentServerFolderUploader\obj\Debug\App.g.cs
+c:\users\kishore\documents\visual studio 2013\Projects\ContentServerFolderUploader\ContentServerFolderUploader\obj\Debug\ContentServerFolderUploader_MarkupCompile.cache
+c:\users\kishore\documents\visual studio 2013\Projects\ContentServerFolderUploader\ContentServerFolderUploader\obj\Debug\ContentServerFolderUploader.g.resources
+c:\users\kishore\documents\visual studio 2013\Projects\ContentServerFolderUploader\ContentServerFolderUploader\obj\Debug\ContentServerFolderUploader.Properties.Resources.resources
+c:\users\kishore\documents\visual studio 2013\Projects\ContentServerFolderUploader\ContentServerFolderUploader\obj\Debug\ContentServerFolderUploader.csproj.GenerateResource.Cache
+c:\users\kishore\documents\visual studio 2013\Projects\ContentServerFolderUploader\ContentServerFolderUploader\obj\Debug\ContentServerFolderUploader.exe
+c:\users\kishore\documents\visual studio 2013\Projects\ContentServerFolderUploader\ContentServerFolderUploader\obj\Debug\ContentServerFolderUploader.pdb
+C:\Users\Kishore\documents\visual studio 2013\Projects\ContentServerFolderUploader\ContentServerFolderUploader\obj\Debug\Views\UploaderView.g.cs
+C:\Users\Kishore\documents\visual studio 2013\Projects\ContentServerFolderUploader\ContentServerFolderUploader\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Kishore\documents\visual studio 2013\Projects\ContentServerFolderUploader\ContentServerFolderUploader\obj\Debug\ContentServerFolderUploader_MarkupCompile.lref
+C:\Users\Kishore\documents\visual studio 2013\Projects\ContentServerFolderUploader\ContentServerFolderUploader\obj\Debug\Views\UploaderView.baml
