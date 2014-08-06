@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="ContentServerUploader.Views.Uploader"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"             
+             mc:Ignorable="d"
+             d:DesignWidth="500">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>        
+        <TextBlock Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Left" Text="Parent Id:"/>
+        <TextBox Grid.Row="0" Margin="60,0,0,0" Text="{Binding ParentId}"/>        
+        <TextBlock Grid.Row="1" Text="{Binding Path}" HorizontalAlignment="Left" />
+        <Button Grid.Row="1" Content="Select Folder" Margin="0,10,0,0" Command="{Binding SelectFolderCommand}"
+                HorizontalAlignment="Right" />
+        <CheckBox Grid.Row="2" IsChecked="{Binding IncludeRootFolder}">Include root folder.</CheckBox>
+        <TextBlock Grid.Row="3">Total Files: <Run Text="{Binding TotalFiles,Mode=OneWay}"></Run></TextBlock>
+        <Button Grid.Row="4" Content="Start Upload" Margin="0,10,0,0" Command="{Binding UploadCommand}" HorizontalAlignment="Right" />
+        <TextBlock Grid.Row="5" Text="{Binding Counter}" Margin="0,10,0,0" HorizontalAlignment="Center" FontSize="36" />
+        <ProgressBar Grid.Row="6" Margin="0,0,0,10" HorizontalAlignment="Stretch" Height="5" Value="{Binding FileProgress,Mode=OneWay}"></ProgressBar>
+        <ProgressBar Grid.Row="7" HorizontalAlignment="Stretch" Height="5" Maximum="{Binding TotalFiles,Mode=OneWay}" Value="{Binding Counter,Mode=OneWay}"></ProgressBar>
+        <ListBox Height="200" Margin="0,10,0,0" Grid.Row="8" ItemsSource="{Binding Messages}" Foreground="Red" Background="Transparent"></ListBox>
+    </Grid>
+</UserControl>
