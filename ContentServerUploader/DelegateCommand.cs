@@ -83,5 +83,7 @@ namespace ContentServerFolderUploader
         {
             _execute(parameter);
         }
+
+        public string Name { get; set; }
     }
 }

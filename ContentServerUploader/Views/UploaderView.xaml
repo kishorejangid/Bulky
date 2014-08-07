@@ -7,27 +7,34 @@
              d:DesignWidth="500">
     <Grid Margin="10">
         <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="24" />
+            <RowDefinition Height="24" />
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
+            <RowDefinition Height="24" />
+            <RowDefinition Height="10" />
+            <RowDefinition Height="24" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>        
         <TextBlock Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Left" Text="Parent Id:"/>
-        <TextBox Grid.Row="0" Margin="60,0,0,0" Text="{Binding ParentId}"/>        
-        <TextBlock Grid.Row="1" Text="{Binding Path}" HorizontalAlignment="Left" />
-        <Button Grid.Row="1" Content="Select Folder" Margin="0,10,0,0" Command="{Binding SelectFolderCommand}"
+        <TextBox Grid.Row="0" Margin="60,0,0,0" Height="24" Text="{Binding ParentId}"/>        
+        <StackPanel Orientation="Vertical" Grid.Row="1">
+            <CheckBox IsChecked="{Binding SelectFolder}">Select Folder</CheckBox>
+        <CheckBox VerticalAlignment="Center" IsChecked="{Binding IncludeRootFolder}">Include root folder.</CheckBox>
+        </StackPanel>
+        <TextBlock Grid.Row="2" VerticalAlignment="Center" Text="{Binding Path}" HorizontalAlignment="Left" />
+        <Button Grid.Row="2" Padding="5,0" Content="Select" VerticalAlignment="Center" Command="{Binding SelectCommand}"
                 HorizontalAlignment="Right" />
-        <CheckBox Grid.Row="2" IsChecked="{Binding IncludeRootFolder}">Include root folder.</CheckBox>
-        <TextBlock Grid.Row="3">Total Files: <Run Text="{Binding TotalFiles,Mode=OneWay}"></Run></TextBlock>
-        <Button Grid.Row="4" Content="Start Upload" Margin="0,10,0,0" Command="{Binding UploadCommand}" HorizontalAlignment="Right" />
-        <TextBlock Grid.Row="5" Text="{Binding Counter}" Margin="0,10,0,0" HorizontalAlignment="Center" FontSize="36" />
-        <ProgressBar Grid.Row="6" Margin="0,0,0,10" HorizontalAlignment="Stretch" Height="5" Value="{Binding FileProgress,Mode=OneWay}"></ProgressBar>
-        <ProgressBar Grid.Row="7" HorizontalAlignment="Stretch" Height="5" Maximum="{Binding TotalFiles,Mode=OneWay}" Value="{Binding Counter,Mode=OneWay}"></ProgressBar>
+        <Button Grid.Row="3" Padding="5,0" Content="{Binding UploadCommand.Name}" VerticalAlignment="Center" Command="{Binding UploadCommand}" HorizontalAlignment="Right" />
+        <Grid Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock FontSize="36">
+                <Run FontSize="30" Text="{Binding Counter,Mode=OneWay}"/>/<Run Text="{Binding TotalFiles}"/>
+                </TextBlock>
+        </Grid>
+        <TextBlock Grid.Row="5" VerticalAlignment="Center">Current File: <Run Text="{Binding Current}"/></TextBlock>
+        <ProgressBar Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Stretch" Height="5" Value="{Binding FileProgress,Mode=OneWay}"></ProgressBar>
+        <ProgressBar Grid.Row="7" HorizontalAlignment="Stretch"  VerticalAlignment="Center" Height="10" Value="{Binding Progress}"></ProgressBar>
         <ListBox Height="200" Margin="0,10,0,0" Grid.Row="8" ItemsSource="{Binding Messages}" Foreground="Red" Background="Transparent"></ListBox>
     </Grid>
 </UserControl>

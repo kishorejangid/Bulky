@@ -1,2 +1,2 @@
-ContentServerFolderUploader
-===========================
+OpenText ContentServer Uploader
+===============================
