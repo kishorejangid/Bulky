@@ -35,6 +35,12 @@
         <TextBlock Grid.Row="5" VerticalAlignment="Center">Current File: <Run Text="{Binding Current}"/></TextBlock>
         <ProgressBar Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Stretch" Height="5" Value="{Binding FileProgress,Mode=OneWay}"></ProgressBar>
         <ProgressBar Grid.Row="7" HorizontalAlignment="Stretch"  VerticalAlignment="Center" Height="10" Value="{Binding Progress}"></ProgressBar>
-        <ListBox Height="200" Margin="0,10,0,0" Grid.Row="8" ItemsSource="{Binding Messages}" Foreground="Red" Background="Transparent"></ListBox>
+        <ListBox Background="Black" Foreground="#C0C0C0" FontFamily="Consolas" FontSize="16" FontWeight="ExtraLight" BorderThickness="0" VerticalAlignment="Stretch" Margin="0,10,0,0" Grid.Row="8" ItemsSource="{Binding Messages}">
+            <ListBox.Resources>
+                <Style TargetType="{x:Type ListBoxItem}">
+                    <Setter Property="BorderThickness" Value="0"/>
+                </Style>
+            </ListBox.Resources>
+        </ListBox>
     </Grid>
 </UserControl>

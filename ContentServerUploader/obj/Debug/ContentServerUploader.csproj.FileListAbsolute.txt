@@ -32,3 +32,20 @@ C:\Users\Kishore\Documents\Visual Studio 2013\Projects\ContentServerUploader\Con
 C:\Users\Kishore\Documents\Visual Studio 2013\Projects\ContentServerUploader\ContentServerUploader\obj\Debug\ContentServerUploader.csproj.GenerateResource.Cache
 C:\Users\Kishore\Documents\Visual Studio 2013\Projects\ContentServerUploader\ContentServerUploader\obj\Debug\ContentServerUploader.exe
 C:\Users\Kishore\Documents\Visual Studio 2013\Projects\ContentServerUploader\ContentServerUploader\obj\Debug\ContentServerUploader.pdb
+D:\Development\ContentServerUploader\ContentServerUploader\bin\Debug\ContentServerUploader.exe.config
+D:\Development\ContentServerUploader\ContentServerUploader\obj\Debug\ContentServerUploader.exe
+D:\Development\ContentServerUploader\ContentServerUploader\obj\Debug\ContentServerUploader.pdb
+D:\Development\ContentServerUploader\ContentServerUploader\bin\Debug\ContentServerUploader.exe
+D:\Development\ContentServerUploader\ContentServerUploader\bin\Debug\ContentServerUploader.pdb
+D:\Development\ContentServerUploader\ContentServerUploader\obj\Debug\ContentServerUploader.csprojResolveAssemblyReference.cache
+D:\Development\ContentServerUploader\ContentServerUploader\obj\Debug\Views\UploaderView.baml
+D:\Development\ContentServerUploader\ContentServerUploader\obj\Debug\MainWindow.g.cs
+D:\Development\ContentServerUploader\ContentServerUploader\obj\Debug\Views\UploaderView.g.cs
+D:\Development\ContentServerUploader\ContentServerUploader\obj\Debug\App.g.cs
+D:\Development\ContentServerUploader\ContentServerUploader\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Development\ContentServerUploader\ContentServerUploader\obj\Debug\ContentServerUploader_MarkupCompile.cache
+D:\Development\ContentServerUploader\ContentServerUploader\obj\Debug\ContentServerUploader_MarkupCompile.lref
+D:\Development\ContentServerUploader\ContentServerUploader\obj\Debug\MainWindow.baml
+D:\Development\ContentServerUploader\ContentServerUploader\obj\Debug\ContentServerUploader.g.resources
+D:\Development\ContentServerUploader\ContentServerUploader\obj\Debug\ContentServerUploader.Properties.Resources.resources
+D:\Development\ContentServerUploader\ContentServerUploader\obj\Debug\ContentServerUploader.csproj.GenerateResource.Cache
