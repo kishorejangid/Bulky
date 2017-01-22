@@ -29,7 +29,7 @@ namespace Bulky
             _file = file;
             _length = file.Length;
             _bytesRead = 0;
-            if (ProgressChanged != null) ProgressChanged(this, new ProgressChangedEventArgs(_bytesRead, _length));
+            ProgressChanged?.Invoke(this, new ProgressChangedEventArgs(_bytesRead, _length));
         }
 
         public double GetProgress()
@@ -54,7 +54,7 @@ namespace Bulky
         {
             int result = _file.Read(buffer, offset, count);
             _bytesRead += result;
-            if (ProgressChanged != null) ProgressChanged(this, new ProgressChangedEventArgs(_bytesRead, _length));
+            ProgressChanged?.Invoke(this, new ProgressChangedEventArgs(_bytesRead, _length));
             return result;
         }
 
@@ -63,25 +63,13 @@ namespace Bulky
             throw new NotImplementedException();
         }
 
-        public override bool CanRead
-        {
-            get { return true; }
-        }
+        public override bool CanRead => true;
 
-        public override bool CanSeek
-        {
-            get { return false; }
-        }
+        public override bool CanSeek => false;
 
-        public override bool CanWrite
-        {
-            get { return false; }
-        }
+        public override bool CanWrite => false;
 
-        public override long Length
-        {
-            get { return _file.Length; }
-        }
+        public override long Length => _file.Length;
 
         public override long Position {
             get { return _bytesRead; }

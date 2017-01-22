@@ -59,5 +59,14 @@ namespace Bulky.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select the folder that you want to upload to Content Server. All the subfolders and files from the selected folder will be uploaded to Content Server..
+        /// </summary>
+        internal static string FolderBrowserDescription {
+            get {
+                return ResourceManager.GetString("FolderBrowserDescription", resourceCulture);
+            }
+        }
     }
 }

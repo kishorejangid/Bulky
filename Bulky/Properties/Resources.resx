@@ -114,4 +114,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="FolderBrowserDescription" xml:space="preserve">
+    <value>Select the folder that you want to upload to Content Server. All the subfolders and files from the selected folder will be uploaded to Content Server.</value>
+  </data>
 </root>
