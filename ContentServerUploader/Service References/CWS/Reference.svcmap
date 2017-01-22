@@ -19,25 +19,25 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost/cws/Authentication.svc" Protocol="http" SourceId="1" />
-    <MetadataSource Address="http://localhost/cws/DocumentManagement.svc" Protocol="http" SourceId="2" />
-    <MetadataSource Address="http://localhost/cws/ContentService.svc" Protocol="http" SourceId="3" />
+    <MetadataSource Address="http://cs10/cws/Authentication.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://cs10/cws/DocumentManagement.svc" Protocol="http" SourceId="2" />
+    <MetadataSource Address="http://cs10/cws/ContentService.svc" Protocol="http" SourceId="3" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Authentication.xsd" MetadataType="Schema" ID="a23419e6-f09d-4ac0-ad5e-e109ad5c1012" SourceId="1" SourceUrl="http://jangid-pc/cws/Authentication.svc?xsd=xsd0" />
-    <MetadataFile FileName="Authentication.wsdl" MetadataType="Wsdl" ID="78ba7d51-4b3d-481a-b7e9-02a3ccc0c120" SourceId="1" SourceUrl="http://jangid-pc/cws/Authentication.svc?wsdl" />
-    <MetadataFile FileName="Authentication.disco" MetadataType="Disco" ID="d2a71aca-27b0-4931-9a7a-ca5bd0ee80fe" SourceId="1" SourceUrl="http://jangid-pc/cws/Authentication.svc?disco" />
-    <MetadataFile FileName="Authentication1.xsd" MetadataType="Schema" ID="1a16b41b-32bc-44e1-9cf3-0e28347866eb" SourceId="1" SourceUrl="http://jangid-pc/cws/Authentication.svc?xsd=xsd1" />
-    <MetadataFile FileName="DocumentManagement.xsd" MetadataType="Schema" ID="cf980fec-21e6-4fa6-a534-4f95d1c0b84f" SourceId="2" SourceUrl="http://jangid-pc/cws/DocumentManagement.svc?xsd=xsd1" />
-    <MetadataFile FileName="DocumentManagement1.xsd" MetadataType="Schema" ID="48af1a4a-b4f1-46ac-a234-ef0f32efcafc" SourceId="2" SourceUrl="http://jangid-pc/cws/DocumentManagement.svc?xsd=xsd0" />
-    <MetadataFile FileName="DocumentManagement2.xsd" MetadataType="Schema" ID="4f2590fa-93d9-4bcb-b335-e8c85ea31a26" SourceId="2" SourceUrl="http://jangid-pc/cws/DocumentManagement.svc?xsd=xsd2" />
-    <MetadataFile FileName="DocumentManagement.disco" MetadataType="Disco" ID="4b807c30-dbee-4ae3-95c1-85dcb3c786c3" SourceId="2" SourceUrl="http://jangid-pc/cws/DocumentManagement.svc?disco" />
-    <MetadataFile FileName="DocumentManagement.wsdl" MetadataType="Wsdl" ID="7436c617-d906-43c8-8b36-2fa62ffcef33" SourceId="2" SourceUrl="http://jangid-pc/cws/DocumentManagement.svc?wsdl" />
-    <MetadataFile FileName="ContentService.disco" MetadataType="Disco" ID="8fbe6f9f-7903-45a3-8722-7974c23271fd" SourceId="3" SourceUrl="http://jangid-pc/cws/ContentService.svc?disco" />
-    <MetadataFile FileName="ContentService.xsd" MetadataType="Schema" ID="f70ee00f-ea20-4787-acff-15859cebd220" SourceId="3" SourceUrl="http://jangid-pc/cws/ContentService.svc?xsd=xsd1" />
-    <MetadataFile FileName="ContentService1.xsd" MetadataType="Schema" ID="d01c2dd2-00c0-4462-bdf8-ac74eabb49a7" SourceId="3" SourceUrl="http://jangid-pc/cws/ContentService.svc?xsd=xsd2" />
-    <MetadataFile FileName="ContentService2.xsd" MetadataType="Schema" ID="d4697bdd-e51c-4ca5-80ef-a555bc23841e" SourceId="3" SourceUrl="http://jangid-pc/cws/ContentService.svc?xsd=xsd0" />
-    <MetadataFile FileName="ContentService.wsdl" MetadataType="Wsdl" ID="dc70c119-5fdd-494a-845a-a5e904629b8d" SourceId="3" SourceUrl="http://jangid-pc/cws/ContentService.svc?wsdl" />
+    <MetadataFile FileName="Authentication1.wsdl" MetadataType="Wsdl" ID="5632d197-1654-4243-9d60-36f14431b5ec" SourceId="1" SourceUrl="http://cs10/cws/Authentication.svc?wsdl" />
+    <MetadataFile FileName="Authentication1.disco" MetadataType="Disco" ID="28987a65-3cc5-4801-9cc4-e53ec4d87303" SourceId="1" SourceUrl="http://cs10/cws/Authentication.svc?disco" />
+    <MetadataFile FileName="Authentication2.xsd" MetadataType="Schema" ID="16c12a6f-ea00-4f32-af3d-452a0c1dcbc7" SourceId="1" SourceUrl="http://cs10/cws/Authentication.svc?xsd=xsd1" />
+    <MetadataFile FileName="Authentication21.xsd" MetadataType="Schema" ID="4ef441b2-9600-4770-af13-b4ac4605aa7e" SourceId="1" SourceUrl="http://cs10/cws/Authentication.svc?xsd=xsd0" />
+    <MetadataFile FileName="DocumentManagement3.xsd" MetadataType="Schema" ID="4099993e-89a9-49ba-804c-573a2375840c" SourceId="2" SourceUrl="http://cs10/cws/DocumentManagement.svc?xsd=xsd0" />
+    <MetadataFile FileName="DocumentManagement1.wsdl" MetadataType="Wsdl" ID="68ad8f63-2af3-4330-bd19-0520e464dc0a" SourceId="2" SourceUrl="http://cs10/cws/DocumentManagement.svc?wsdl" />
+    <MetadataFile FileName="DocumentManagement31.xsd" MetadataType="Schema" ID="0625e3bd-674d-4d6d-aeb6-19f1bc00fde9" SourceId="2" SourceUrl="http://cs10/cws/DocumentManagement.svc?xsd=xsd1" />
+    <MetadataFile FileName="DocumentManagement32.xsd" MetadataType="Schema" ID="069aa25d-077f-47ab-8ec9-64197c8673d0" SourceId="2" SourceUrl="http://cs10/cws/DocumentManagement.svc?xsd=xsd2" />
+    <MetadataFile FileName="DocumentManagement1.disco" MetadataType="Disco" ID="5ebc3436-ba84-4bdd-baaf-99f2ea4525bd" SourceId="2" SourceUrl="http://cs10/cws/DocumentManagement.svc?disco" />
+    <MetadataFile FileName="ContentService3.xsd" MetadataType="Schema" ID="90e7c94e-69c0-4a39-a38a-afc6c0bff295" SourceId="3" SourceUrl="http://cs10/cws/ContentService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ContentService1.wsdl" MetadataType="Wsdl" ID="aee3b551-0a04-4145-be4a-3c631fbb1662" SourceId="3" SourceUrl="http://cs10/cws/ContentService.svc?wsdl" />
+    <MetadataFile FileName="ContentService1.disco" MetadataType="Disco" ID="f6eb91c8-3c0b-4a5b-aca5-5ec569d09470" SourceId="3" SourceUrl="http://cs10/cws/ContentService.svc?disco" />
+    <MetadataFile FileName="ContentService31.xsd" MetadataType="Schema" ID="3130da9f-dc09-47c2-96f6-5cd0c1d4293c" SourceId="3" SourceUrl="http://cs10/cws/ContentService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ContentService32.xsd" MetadataType="Schema" ID="00e853db-f95b-47ec-8713-7c66d41dba1c" SourceId="3" SourceUrl="http://cs10/cws/ContentService.svc?xsd=xsd2" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

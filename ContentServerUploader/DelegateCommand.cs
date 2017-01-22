@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Windows.Input;
+using ContentServerFolderUploader;
 
-namespace ContentServerFolderUploader
+namespace Bulky
 {
     /// <summary>
     /// A command that executes delegates to determine whether the command can execute, and to execute the command.
@@ -85,5 +87,5 @@ namespace ContentServerFolderUploader
         }
 
         public string Name { get; set; }
-    }
+    }   
 }

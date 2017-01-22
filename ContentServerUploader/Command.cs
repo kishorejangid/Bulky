@@ -5,7 +5,7 @@ using System.Windows;
 using System.Windows.Input;
 using System.Windows.Threading;
 
-namespace ContentServerFolderUploader
+namespace Bulky
 {
     /// <summary>
     /// A base class for command implementations.

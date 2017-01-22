@@ -1,46 +1,97 @@
-﻿<UserControl x:Class="ContentServerUploader.Views.Uploader"
+﻿<UserControl x:Class="Bulky.Views.Uploader"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"             
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:viewModels="clr-namespace:Bulky.ViewModels"
+             xmlns:converters="clr-namespace:Bulky.Converters"
+             xmlns:bulky="clr-namespace:Bulky"
              mc:Ignorable="d"
-             d:DesignWidth="500">
+             d:DesignWidth="500" Name="UploadView">
+    <UserControl.Resources>
+        <converters:ForegroundConverter x:Key="foregroundConverter" />
+    </UserControl.Resources>
     <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="30" />
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="24" />
-            <RowDefinition Height="24" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="24" />
-            <RowDefinition Height="10" />
-            <RowDefinition Height="24" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
-        </Grid.RowDefinitions>        
-        <TextBlock Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Left" Text="Parent Id:"/>
-        <TextBox Grid.Row="0" Margin="60,0,0,0" Height="24" Text="{Binding ParentId}"/>        
-        <StackPanel Orientation="Vertical" Grid.Row="1">
-            <CheckBox IsChecked="{Binding SelectFolder}">Select Folder</CheckBox>
-        <CheckBox VerticalAlignment="Center" IsChecked="{Binding IncludeRootFolder}">Include root folder.</CheckBox>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Left" Text="Parent Id:" />
+        <TextBox Grid.Row="0" Margin="60,0,0,0" Text="{Binding ParentId}" VerticalContentAlignment="Center" />
+        <StackPanel Margin="60,0,0,0"  Orientation="Vertical" Grid.Row="1">
+            <CheckBox Margin="0,5" IsChecked="{Binding SelectFolder}">Select folder</CheckBox>
+            <CheckBox IsChecked="{Binding IncludeRootFolder}">Include root folder</CheckBox>
         </StackPanel>
-        <TextBlock Grid.Row="2" VerticalAlignment="Center" Text="{Binding Path}" HorizontalAlignment="Left" />
-        <Button Grid.Row="2" Padding="5,0" Content="Select" VerticalAlignment="Center" Command="{Binding SelectCommand}"
-                HorizontalAlignment="Right" />
-        <Button Grid.Row="3" Padding="5,0" Content="{Binding UploadCommand.Name}" VerticalAlignment="Center" Command="{Binding UploadCommand}" HorizontalAlignment="Right" />
+        <TextBlock Grid.Row="2" Margin="60,0,0,0" VerticalAlignment="Center" Text="{Binding Path}" HorizontalAlignment="Left" FontSize="14"/>
+        <Button Grid.Row="2" Padding="5" Margin="0,5" Width="100" Content="Select" VerticalAlignment="Center"
+                Command="{Binding SelectCommand}"
+                HorizontalAlignment="Right" Style="{DynamicResource RoundCornerButton}" />
+        <Button Grid.Row="3" Padding="5" Width="100" Content="{Binding UploadCommand.Name}" VerticalAlignment="Center"
+                Command="{Binding UploadCommand}" HorizontalAlignment="Right" Style="{DynamicResource RoundCornerButton}" />
         <Grid Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock FontSize="36">
-                <Run FontSize="30" Text="{Binding Counter,Mode=OneWay}"/>/<Run Text="{Binding TotalFiles}"/>
-                </TextBlock>
+                <Run FontSize="30" Text="{Binding Counter,Mode=OneWay}" />/<Run Text="{Binding TotalFiles}" />
+            </TextBlock>
         </Grid>
-        <TextBlock Grid.Row="5" VerticalAlignment="Center">Current File: <Run Text="{Binding Current}"/></TextBlock>
-        <ProgressBar Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Stretch" Height="5" Value="{Binding FileProgress,Mode=OneWay}"></ProgressBar>
-        <ProgressBar Grid.Row="7" HorizontalAlignment="Stretch"  VerticalAlignment="Center" Height="10" Value="{Binding Progress}"></ProgressBar>
-        <ListBox Background="Black" Foreground="#C0C0C0" FontFamily="Consolas" FontSize="16" FontWeight="ExtraLight" BorderThickness="0" VerticalAlignment="Stretch" Margin="0,10,0,0" Grid.Row="8" ItemsSource="{Binding Messages}">
-            <ListBox.Resources>
-                <Style TargetType="{x:Type ListBoxItem}">
-                    <Setter Property="BorderThickness" Value="0"/>
-                </Style>
-            </ListBox.Resources>
-        </ListBox>
+        <TextBlock Grid.Row="5" VerticalAlignment="Center">Current File: <Run Text="{Binding Current}" /></TextBlock>
+        <ProgressBar Grid.Row="6" Margin="0,0,0,7" VerticalAlignment="Center" HorizontalAlignment="Stretch" Height="10"
+                     Value="{Binding FileProgress,Mode=OneWay}" Style="{DynamicResource ProgressBarStyle}" />
+        <ProgressBar Grid.Row="7" HorizontalAlignment="Stretch" Style="{DynamicResource ProgressBarStyle}" VerticalAlignment="Center" Height="20"
+                     Value="{Binding Progress}" />
+        <CheckBox Grid.Row="8" Margin="0,10,0,5" IsChecked="{Binding AutoScrollLogs}">Auto Scroll Logs</CheckBox>
+        <ScrollViewer Grid.Row="9" VerticalAlignment="Stretch">
+            <ListBox Background="Black" ItemsSource="{Binding Messages}"
+                     ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                     bulky:ListBoxExtenders.AutoScrollToEnd="{Binding AutoScrollLogs}">
+                <ListBox.InputBindings>
+                    <KeyBinding Key="C" Modifiers="Control" Command="{Binding CopyCommand}" CommandParameter="{Binding RelativeSource={RelativeSource FindAncestor,AncestorType=ListBox},Path=SelectedItem.Message}"></KeyBinding>
+                </ListBox.InputBindings>
+                <ListBox.Template>
+                    <ControlTemplate TargetType="ItemsControl">
+                        <Border BorderThickness="0" Background="Black" Padding="0,0,0,10">
+                            <ItemsPresenter />
+                        </Border>
+                    </ControlTemplate>
+                </ListBox.Template>
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <VirtualizingStackPanel />
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+                <ListBox.Resources>
+                    <Style TargetType="{x:Type ListBoxItem}">
+                        <Setter Property="BorderThickness" Value="0" />
+                        <Setter Property="Padding" Value="0" />
+                    </Style>
+                </ListBox.Resources>
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <DataTemplate.DataType>
+                            <x:Type TypeName="viewModels:LogMessage" />
+                        </DataTemplate.DataType>
+                        <TextBlock Text="{Binding Message}" Tag="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}}}"
+                                   Width="{Binding RelativeSource={RelativeSource AncestorType=ListBox},Path=ActualWidth}"
+                                   TextWrapping="Wrap" FontFamily="Consolas" FontSize="16" FontWeight="ExtraLight"
+                                   HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                                   Foreground="{Binding Severity,Converter={StaticResource foregroundConverter}}">
+                            <TextBlock.ContextMenu>
+                                <ContextMenu>
+                                    <MenuItem InputGestureText="Ctrl C" Command="{Binding PlacementTarget.Tag.DataContext.CopyCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=ContextMenu}}" Header="Copy" CommandParameter="{Binding Path=Message}">
+                                    </MenuItem>
+                                </ContextMenu>
+                            </TextBlock.ContextMenu>
+                        </TextBlock>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </ScrollViewer>
     </Grid>
 </UserControl>

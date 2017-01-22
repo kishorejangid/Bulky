@@ -1,11 +1,11 @@
-﻿<Window x:Class="ContentServerUploader.MainWindow"
+﻿<Window x:Class="Bulky.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:view="clr-namespace:ContentServerUploader.Views"
-        xmlns:viewModels="clr-namespace:ContentServerUploader.ViewModels"
-        Title="Content Server Uploader" Width="800" Height="600" ResizeMode="CanResizeWithGrip" WindowStartupLocation="CenterScreen">
+        xmlns:viewModels="clr-namespace:Bulky.ViewModels"
+        xmlns:views="clr-namespace:Bulky.Views"
+        Title="Content Server Bulky" Width="800" Height="600" ResizeMode="CanResizeWithGrip" WindowStartupLocation="CenterScreen" Icon="bulky.ico">
     <Window.DataContext>
         <viewModels:UploaderViewModel/>
     </Window.DataContext>
-    <view:Uploader/>
+    <views:Uploader />
 </Window>

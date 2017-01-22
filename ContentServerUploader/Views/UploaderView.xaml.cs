@@ -1,6 +1,4 @@
-﻿using System.Windows.Controls;
-
-namespace ContentServerUploader.Views
+﻿namespace Bulky.Views
 {
     /// <summary>
     /// Interaction logic for Uploader.xaml

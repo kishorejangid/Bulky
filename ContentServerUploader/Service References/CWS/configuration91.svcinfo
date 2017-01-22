@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="5CCWlgzeUJghYGOK/xVS8PrbtMk=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="fOCmf5tQB4Zh4g4KnBAR35KaJYs=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_Authentication">
       <properties>
@@ -330,10 +330,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="BasicHttpBinding_Authentication" contract="CWS.Authentication" bindingType="basicHttpBinding" address="http://jangid-pc/cws/Authentication.svc" bindingConfiguration="BasicHttpBinding_Authentication">
+    <endpoint name="BasicHttpBinding_Authentication" contract="CWS.Authentication" bindingType="basicHttpBinding" address="http://cs10/cws/Authentication.svc" bindingConfiguration="BasicHttpBinding_Authentication">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://jangid-pc/cws/Authentication.svc</serializedValue>
+          <serializedValue>http://cs10/cws/Authentication.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -415,10 +415,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="BasicHttpBinding_DocumentManagement" contract="CWS.DocumentManagement" bindingType="basicHttpBinding" address="http://jangid-pc/cws/DocumentManagement.svc" bindingConfiguration="BasicHttpBinding_DocumentManagement">
+    <endpoint name="BasicHttpBinding_DocumentManagement" contract="CWS.DocumentManagement" bindingType="basicHttpBinding" address="http://cs10/cws/DocumentManagement.svc" bindingConfiguration="BasicHttpBinding_DocumentManagement">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://jangid-pc/cws/DocumentManagement.svc</serializedValue>
+          <serializedValue>http://cs10/cws/DocumentManagement.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
@@ -500,10 +500,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="BasicHttpBinding_ContentService" contract="CWS.ContentService" bindingType="basicHttpBinding" address="http://jangid-pc/cws/ContentService.svc" bindingConfiguration="BasicHttpBinding_ContentService">
+    <endpoint name="BasicHttpBinding_ContentService" contract="CWS.ContentService" bindingType="basicHttpBinding" address="http://cs10/cws/ContentService.svc" bindingConfiguration="BasicHttpBinding_ContentService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://jangid-pc/cws/ContentService.svc</serializedValue>
+          <serializedValue>http://cs10/cws/ContentService.svc</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />
